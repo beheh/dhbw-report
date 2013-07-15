@@ -1,0 +1,50 @@
+%
+% Allgemeine Berichtsvorlage
+% Benedict Etzel
+%
+
+% Kopf
+\input{head.tex}
+
+% Metadaten
+\hypersetup{pdftitle={*Titel*}}
+\hypersetup{pdfauthor={*Autor*}}
+\hypersetup{pdfsubject={*Thema*}}
+\hypersetup{pdfkeywords={Schlüsselwort}}
+
+% Dokument
+\begin{document}
+
+	% Titelseite
+	\include{title}
+	
+	% Zeilenabstand
+	\setstretch{1,241}
+	
+	% Erklärung
+	\include{statement}
+	
+	% Verzeichnisse
+	\pagenumbering{Roman}
+	\include{contents}
+	\include{acronyms}
+	\include{images}
+	
+	% Inhalt
+	\pagestyle{fancy}
+	\pagenumbering{arabic}
+	
+	\include{example}
+		
+	% Quellen
+	\pagenumbering{Roman}
+	\setcounter{page}{4}
+	\include{sources}
+	
+	% Anhang
+	\setcounter{section}{0}
+	\fancyhead[C]{Anhang \thechapter}
+	\titlespacing*{\chapter}{0pt}{80pt}{40pt}
+	\include{appendix}
+
+\end{document}

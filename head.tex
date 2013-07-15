@@ -1,0 +1,70 @@
+% Dokument
+\documentclass[12pt,a4paper]{report}
+
+% Encoding
+\usepackage[utf8x]{inputenc}
+\usepackage[german]{babel}
+\usepackage{ae}
+
+% Schriftar
+\usepackage{times}
+
+% Typographie
+\usepackage{microtype}
+
+% Zeilenabstand
+\usepackage{setspace}
+
+% Abstand vor Kapiteln
+\usepackage{titlesec}
+\titleformat{\chapter}[display]{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+
+% Keine Einrückung bei Paragraphen
+\setlength{\parindent}{0pt}
+
+% Grafiken einbinden
+\usepackage{graphicx}
+\usepackage{subfigure} % Grafiklayout
+
+% Syntax-Highlighting
+\usepackage{listings}
+\lstset{literate={ö}{{\"o}}1 {ä}{{\"a}}1 {ü}{{\"u}}1}
+\renewcommand\lstlistingname{Quelltext}
+\renewcommand\lstlistlistingname{Quelltexte}
+
+% Abkürzungsverzeichnis
+\usepackage[printonlyused]{acronym}
+\newcommand{\acfr}[1]{\acsu{#1} (\acl{#1})}
+\newcommand{\acfrp}[1]{\acsp{#1} (\aclp{#1})\acused{#1}}
+\newcommand{\act}[1]{\aclu{#1} \acs{#1}}
+
+% Kompakte und mehrspaltige Listen
+\usepackage{paralist}
+
+% Kopf- und Fußzeile
+\usepackage{fancyhdr}
+\fancyhf{} % Alle Kopf- und Fußzeilenfelder bereinigen
+\fancyhead[C]{\chaptername \ \thechapter} % Zentrierte Kopfzeile
+\renewcommand{\headrulewidth}{0.4pt} % Obere Trennlinie
+\fancyfoot[C]{\thepage} % Seitennummer
+%\renewcommand{\footrule}{ }
+\setlength{\footskip}{1.5cm}
+
+% Tabellen
+\usepackage{tabularx}
+\usepackage{longtable}
+\usepackage{array} 
+\usepackage{multirow}
+
+% Tiefe des Inhaltsverzeichnisses
+\setcounter{tocdepth}{2}
+
+% PDFs
+\usepackage{pdfpages}
+
+% Referenzen
+\usepackage[hidelinks]{hyperref}
+
+% Seitenränder
+\usepackage[includeheadfoot, lmargin=2.5cm, rmargin=2.5cm, top=2cm, bottom=1.5cm]{geometry}
